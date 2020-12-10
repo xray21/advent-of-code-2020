@@ -15,6 +15,7 @@ namespace AdventOfCode2020
         {
             string[] input;
             long output = 0;
+            int invalidNumIndex = -1;
 
             if (useTestInput)
             {
@@ -37,11 +38,10 @@ namespace AdventOfCode2020
 
             for (int i = preambleLength; i < nums.Count; i++)
             {
-                var preamble = nums.GetRange(i - preambleLength, preambleLength);
-
+                var numGood = false;
                 var num = nums[i];
 
-                var numGood = false;
+                var preamble = nums.GetRange(i - preambleLength, preambleLength);
 
                 Console.WriteLine($"Starting search for {i}: {num}");
 
@@ -82,6 +82,7 @@ namespace AdventOfCode2020
                 if (!numGood)
                 {
                     output = num;
+                    invalidNumIndex = i;
                     break;
                 }
             }
@@ -89,10 +90,47 @@ namespace AdventOfCode2020
             Console.WriteLine($"This is the Part 1 Output: {output}");
             Console.WriteLine();
 
+            if (invalidNumIndex == -1)
+            {
+                return;
+            }
+
             Console.WriteLine("Part 2");
 
-            // Insert Part 2 Solution Here
             output = 0;
+
+            var invalidNum = nums[invalidNumIndex];
+            var start = 0;
+            var end = 1;
+
+            var sum = nums.GetRange(start, end).Sum();
+            Console.WriteLine($"Checking num range {start}-{start + end - 1}: {String.Join(", ", nums.GetRange(start, end))}. Sum: {sum} ({invalidNum})");
+
+            while (sum != invalidNum)
+            {
+                if (sum < invalidNum)
+                {
+                    end++;
+                }
+                
+                if (sum > invalidNum)
+                {
+                    start++;
+                    end--;
+                }
+
+                if (start > invalidNumIndex || end > invalidNumIndex)
+                {
+                    break;
+                }
+
+                sum = nums.GetRange(start, end).Sum();
+                Console.WriteLine($"Checking num range {start}-{start + end - 1}: {String.Join(", ", nums.GetRange(start, end))}. Sum: {sum} ({invalidNum})");
+            }
+
+            var finalRange = nums.GetRange(start, end);
+
+            output = finalRange.Min() + finalRange.Max();
 
             Console.WriteLine($"This is the Part 2 Output: {output}");
             Console.WriteLine();
