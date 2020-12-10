@@ -43,16 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Day1\Day1.cs" />
-    <Compile Include="Day2\Day2.cs" />
-    <Compile Include="Day3\Day3.cs" />
-    <Compile Include="Day4\Day4.cs" />
-    <Compile Include="Day5\Day5.cs" />
-    <Compile Include="Day6\Day6.cs" />
-    <Compile Include="Day7\Day7.cs" />
-    <Compile Include="Day8\Day8.cs" />
-    <Compile Include="Day9\Day9.cs" />
+    <Compile Include="Day01\Day1.cs" />
+    <Compile Include="Day02\Day2.cs" />
+    <Compile Include="Day03\Day3.cs" />
+    <Compile Include="Day04\Day4.cs" />
+    <Compile Include="Day05\Day5.cs" />
+    <Compile Include="Day06\Day6.cs" />
+    <Compile Include="Day07\Day7.cs" />
+    <Compile Include="Day08\Day8.cs" />
+    <Compile Include="Day09\Day9.cs" />
+    <Compile Include="Day10\Day10.cs" />
     <Compile Include="DayX\DayX.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
     <Compile Include="Interfaces\IDay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,58 +63,64 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Day1\Input.txt">
+    <Content Include="Day01\Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day4\Input.txt">
+    <Content Include="Day04\Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day5\Input.txt">
+    <Content Include="Day05\Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day6\Input.txt">
+    <Content Include="Day06\Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day7\Input.txt">
+    <Content Include="Day07\Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day8\Input.txt">
+    <Content Include="Day08\Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day9\Input.txt">
+    <Content Include="Day09\Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day6\TestInput.txt">
+    <Content Include="Day06\TestInput.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day4\TestInput.txt">
+    <Content Include="Day04\TestInput.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day1\TestInput.txt">
+    <Content Include="Day01\TestInput.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day2\Input.txt">
+    <Content Include="Day02\Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day2\TestInput.txt">
+    <Content Include="Day02\TestInput.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day3\Input.txt">
+    <Content Include="Day03\Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day3\TestInput.txt">
+    <Content Include="Day03\TestInput.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day5\TestInput.txt">
+    <Content Include="Day05\TestInput.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day7\TestInput.txt">
+    <Content Include="Day07\TestInput.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day8\TestInput.txt">
+    <Content Include="Day08\TestInput.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day9\TestInput.txt">
+    <Content Include="Day09\TestInput.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Day10\Input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Day10\TestInput.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="DayX\Input.txt">

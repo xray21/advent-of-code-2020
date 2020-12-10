@@ -87,6 +87,14 @@ namespace AdventOfCode2020
                     day9.Execute();
 
                     break;
+                case "10":
+                    Console.WriteLine("Executing Day 10.\n");
+
+                    var day10 = new Day10();
+                    day10.Execute(true);
+                    day10.Execute();
+
+                    break;
                 default:
                     Console.WriteLine($"{dayNum} is not a valid input");
                     break;
