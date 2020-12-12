@@ -6,23 +6,17 @@ using System.Linq;
 
 namespace AdventOfCode2020
 {
-    public class Day10 : IDay
+    public class Day10 : Day
     {
-        public void Execute(bool useTestInput = false)
+        public Day10() : base(10)
         {
-            string[] input;
+        }
+
+        public override void Execute(bool useTestInput = false)
+        {
             long output = 0;
 
-            if (useTestInput)
-            {
-                Console.WriteLine("TEST");
-                input = File.ReadAllLines("Day10/TestInput.txt");
-            }
-            else
-            {
-                Console.WriteLine("ACTUAL");
-                input = File.ReadAllLines("Day10/Input.txt");
-            }
+            var input = GetInput(useTestInput);
 
             Console.WriteLine("Part 1");
 
