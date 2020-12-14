@@ -26,7 +26,7 @@ namespace AdventOfCode2020
                 case "9":  day = new Day9();  break;
                 case "10": day = new Day10(); break;
                 case "11": day = new Day11(); break;
-                //case "12": day = new Day12(); break;
+                case "12": day = new Day12(); break;
                 //case "13": day = new Day13(); break;
                 //case "14": day = new Day14(); break;
                 //case "15": day = new Day15(); break;

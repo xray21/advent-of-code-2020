@@ -40,17 +40,19 @@ namespace AdventOfCode2020
 
         private void PrintMatrix (List<List<char>> seatMatrix)
         {
+            var str = "";
+
             foreach (var row in seatMatrix)
             {
                 foreach (var seat in row)
                 {
-                    Console.Write(seat);
+                    str += seat;
                 }
 
-                Console.WriteLine();
+                str += '\n';
             }
 
-            Console.WriteLine();
+            Console.WriteLine(str);
         }
 
         private List<List<char>> CloneMatrix (List<List<char>> seatMatrix)
@@ -103,6 +105,7 @@ namespace AdventOfCode2020
             adjacents.Add(new int[2] { 1, 0 });
             adjacents.Add(new int[2] { 1, 1 });
 
+            Console.Clear();
             Console.WriteLine("Starting Configuration");
             PrintMatrix(seatMatrix);
 
@@ -111,6 +114,7 @@ namespace AdventOfCode2020
                 round++;
                 numSeatsChanged = 0;
 
+                Console.Clear();
                 Console.WriteLine($"Round {round}...FIGHT.");
 
                 for (var r = 0; r < seatMatrix.Count; r++)
@@ -131,7 +135,7 @@ namespace AdventOfCode2020
                             // Don't even bother if we're in one of the corners, there will never be enough adjacents. 
                             if ((s == 0 || s == row.Count - 1) && (r == 0 || r == seatMatrix.Count))
                             {
-                                Console.WriteLine($"Skipping row {r}, seat {s}");
+                                // Console.WriteLine($"Skipping row {r}, seat {s}");
                                 continue;
                             }
 
