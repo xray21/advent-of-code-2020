@@ -1,26 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using AdventOfCode2020.Extensions;
 
-namespace AdventOfCode2020.Classes
+namespace AdventOfCode2020
 {
-    public class DayX : IDay
+    public class DayX : Day
     {
-        public void Execute(bool useTestInput = false)
+        public DayX() : base(0)
         {
-            string[] input;
+        }
+
+        public override void Execute(bool useTestInput = false)
+        {
             int output = 0;
 
-            if (useTestInput)
-            {
-                Console.WriteLine("TEST");
-                input = File.ReadAllLines("DayX/TestInput.txt");
-            }
-            else
-            {
-                Console.WriteLine("ACTUAL");
-                input = File.ReadAllLines("DayX/Input.txt");
-            }
+            var input = GetInput(useTestInput);
 
             Console.WriteLine("Part 1");
 
